@@ -49,7 +49,7 @@ function isTenOrFive(num) {
 
 function isInRange(num) {
   // return true if num is less than 50 and greater than 20
-  if(num<=50&&num>=20){
+  if(num<50&&num>20){
     return(true);
 }
   else
@@ -95,12 +95,14 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-  if(num%2!==2){
-    return(true);
-  }else{
-    return(false);
-  }
+  for(var i=2;i<num;i++){
+    if(num%i===0){
+      return(false);
+    }else
 
+      return (true);
+    }
+    return (false);
 }
 
 function returnFirst(arr) {
@@ -124,12 +126,11 @@ function incrementByOne(arr) {
   // arr is an array of integers  
   // increase each integer by one
   // return the array
-  var array=[];
   for(var i=0;i<arr.length;i++){
-    array= array+1;
-    return(array);
+    arr[i] = arr[i] + 1;
+    //array= array+1;    
   }
-
+  return(arr);
 }
 
 function addItemToArray(arr, item) {
@@ -153,7 +154,11 @@ function wordsToSentence(words) {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
-
+ var array=words[0];
+  for(var i=1 ;i<words.length;i++){
+    array = array + ' '+ words[i];
+  }
+  return(array);
 }
 
 function contains(arr, item) {
