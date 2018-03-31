@@ -26,6 +26,9 @@ function greeting(language) {
   else if(language==='English'){
     return('Hello!');
   }
+  else if(language==='Mandarin'){
+    return('Ni Hao!');
+  }
   else if(language==='Spanish'){
     return ('Hola!');
   }
