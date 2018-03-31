@@ -1,22 +1,22 @@
 //In these first 6 questions, replace `null` with the answer
 
 //create a string variable, it can contain anything
-const newString = null ;
+const newString = "" ;
 
 //create a number variable, it an be any number
-const newNum = null ;
+const newNum = 0 ;
 
 //create a boolean variable
-const newBool = null ;
+const newBool = false ;
 
 //solve the following math problem
-const newSubtract = 10 - null === 5;
+const newSubtract = 10 - 5 === 5;
 
 //Solve the following math problem
-const newMultiply = 10 * null === 40 ;
+const newMultiply = 10 * 4 === 40 ;
 
 //Solve the following math problem:
-const newModulo = 21 % 5 === null ;
+const newModulo = (21 % 5 == 0)?false:true ;
 
 
 
@@ -35,26 +35,19 @@ function add(x, y) {
   // x and y are numbers
   // add x and y together and return the value
   // code here
-  let subtract=num-5;
-  return subtract;
+  return (x+y);
 }
 
 function subtract(x, y) {
   // subtract y from x and return the value
   // code here
-  if(str1.length===str2.length){
-      return true;
-  }
-  return false;
+  return (x-y);
 }
 
 function multiply(x, y) {
   // multiply x by y and return the value
   // code here
-  if (x == y){
-    return true;
-  }
-  return false;
+  return (x*y);
 }
 
 function divide(x, y) {
@@ -68,7 +61,7 @@ function areEqual(x, y) {
   // return true if x and y are the same
   // otherwise return false
   // code here
-  if(num>50){
+  if(x==y){
     return true;
   }
   return false;
@@ -79,7 +72,7 @@ function areSameLength(str1, str2) {
   // otherwise return false
   // code here
   if (str1.length == str2.length)
-	  return true;
+	return true;
   
   return false;
 }
@@ -88,16 +81,18 @@ function lessThanNinety(num) {
   // return true if the function argument: num , is less than ninety
   // otherwise return false
   // code here
-  let div=x/y;
-  return div;
+  if (num < 90)
+	return true;
+  return false;
 }
 
 function greaterThanFifty(num) {
   // return true if num is greater than fifty
   // otherwise return false
   // code here
-  let mul=x*y;
-  return mul;
+  if (num > 50)
+	return true;
+  return false;
 }
 
 function getRemainder(x, y) {
